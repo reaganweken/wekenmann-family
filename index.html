@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>The Wekenmanns | Christmas 2026</title>
 
   <style>
@@ -13,40 +14,48 @@
 
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: "Segoe UI", sans-serif;
-      background: #153b2b;
-      color: #f8f3e8;
+      background: #f5eedf;
+      color: #234632;
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      padding: 65px 20px 35px;
+      padding: 65px 20px 30px;
     }
 
     h1 {
       font-family: Georgia, serif;
-      font-size: 2.7rem;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       font-weight: normal;
-      margin: 0 0 12px;
+      margin: 0;
+      color: #234632;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 5px;
+      margin: 15px 0 0;
+      color: #234632;
     }
 
     .gold-line {
-      width: 85px;
+      width: 75px;
       height: 2px;
-      background: #c6a45c;
-      margin: 22px auto;
-    }
-
-    .year {
-      color: #d2b878;
-      letter-spacing: 4px;
-      font-size: 1rem;
+      background: #b99a59;
+      margin: 25px auto 0;
     }
 
     .content {
-      max-width: 850px;
+      width: 100%;
+      max-width: 950px;
+      padding: 10px 25px 30px;
       margin: 0 auto;
-      padding: 15px 20px 60px;
     }
 
     .video-container {
@@ -55,34 +64,67 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      border: 1px solid #c6a45c;
+      border: 1px solid #b99a59;
       border-radius: 8px;
-      background: #0d291e;
+      background: #234632;
+      box-shadow: 0 5px 18px rgba(35, 70, 50, 0.12);
     }
 
     .video-container iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       border: 0;
     }
 
-    footer {
-      padding: 25px;
-      color: #c6a45c;
-      font-family: Georgia, serif;
-      font-size: 0.95rem;
+    .trees {
+      position: relative;
+      height: 155px;
+      margin-top: auto;
+      overflow: hidden;
+    }
+
+    .tree {
+      position: absolute;
+      bottom: 0;
+      width: 125px;
+      height: 145px;
+    }
+
+    .tree.left {
+      left: 20px;
+    }
+
+    .tree.right {
+      right: 20px;
+      transform: scaleX(-1);
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+      header {
+        padding: 50px 15px 25px;
       }
 
-      header {
-        padding-top: 50px;
+      h1 {
+        font-size: 2.15rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .content {
+        padding: 10px 15px 20px;
+      }
+
+      .tree {
+        width: 85px;
+        height: 105px;
+      }
+
+      .trees {
+        height: 115px;
       }
     }
   </style>
@@ -92,28 +134,54 @@
 
   <header>
     <h1>Merry Christmas from the Wekenmanns</h1>
+    <h2>2026</h2>
     <div class="gold-line"></div>
-    <div class="year">CHRISTMAS 2026</div>
   </header>
 
   <main class="content">
 
     <div class="video-container">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+        src="https://www.youtube-nocookie.com/embed/38t3895lUL4"
         title="The Wekenmanns Christmas 2026"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
     </div>
 
-    <!-- Additional photos or Christmas updates can go here in the future -->
-
   </main>
 
-  <footer>
-    With love, The Wekenmanns
-  </footer>
+  <div class="trees">
+
+    <!-- Left Christmas tree -->
+    <svg class="tree left" viewBox="0 0 125 145"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M62 8 L39 48 H49 L25 83 H43 L12 119 H112 L81 83 H99 L75 48 H85 Z"
+            fill="#234632"/>
+      <rect x="56" y="119" width="13" height="22" fill="#987448"/>
+      <path d="M62 1 L65 9 L73 11 L65 14 L62 22 L59 14 L51 11 L59 9 Z"
+            fill="#b99a59"/>
+      <circle cx="48" cy="59" r="2.5" fill="#d0b16c"/>
+      <circle cx="78" cy="78" r="2.5" fill="#d0b16c"/>
+      <circle cx="52" cy="99" r="2.5" fill="#d0b16c"/>
+      <circle cx="85" cy="107" r="2.5" fill="#d0b16c"/>
+    </svg>
+
+    <!-- Right Christmas tree -->
+    <svg class="tree right" viewBox="0 0 125 145"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M62 8 L39 48 H49 L25 83 H43 L12 119 H112 L81 83 H99 L75 48 H85 Z"
+            fill="#234632"/>
+      <rect x="56" y="119" width="13" height="22" fill="#987448"/>
+      <path d="M62 1 L65 9 L73 11 L65 14 L62 22 L59 14 L51 11 L59 9 Z"
+            fill="#b99a59"/>
+      <circle cx="48" cy="59" r="2.5" fill="#d0b16c"/>
+      <circle cx="78" cy="78" r="2.5" fill="#d0b16c"/>
+      <circle cx="52" cy="99" r="2.5" fill="#d0b16c"/>
+      <circle cx="85" cy="107" r="2.5" fill="#d0b16c"/>
+    </svg>
+
+  </div>
 
 </body>
 </html>
